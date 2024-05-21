@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aniversários</title>
+
+        <link rel="stylesheet" href="app.css" />
+    </head>
+    <body>
+        <h1 class="text-4xl text-center">Aniversários</h1>
+        <form class="form js-form">
+            <label for="name">
+                Nome
+                <input
+                    placeholder="Ecreve o nome aqui"
+                    class="form-field js-field"
+                    id="name"
+                    minlength="3"
+                    maxlength="120"
+                    pattern="^[a-zA-Z\s]*$"
+                    name="name"
+                    required
+                    type="text"
+                />
+            </label>
+            <label for="birth-date">
+                Data de Nascimento
+                <input
+                    min="1900-01-01"
+                    class="form-field js-field"
+                    id="birth-date"
+                    name="birth-date"
+                    required
+                    type="date"
+                />
+            </label>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <table class="border-4 border-black">
+            <thead class="border-2 border-black">
+                <tr>
+                    <th class="border border-black">Nome</th>
+                    <th class="border border-black">Data de Nascimento</th>
+                    <th class="border border-black" colspan="2">Ações</th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+        </table>
+
+        <script src="app.js"></script>
+    </body>
+</html>

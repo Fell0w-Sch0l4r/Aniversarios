@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.delete-btn{
+    @apply  border bg-red-500   
+}
+
+.edit-btn{
+    @apply  border bg-yellow-200   
+}
