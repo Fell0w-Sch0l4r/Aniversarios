@@ -13,31 +13,7 @@ const pessoas = []
 populatePeopleTable()
 
 
-form.addEventListener("submit", (event) => {
-
-    if (formMode === "CREATE"){
-
-        event.preventDefault();
-        console.log(nome.value);
-        console.log(birthDate.value);
-
-        
-
-        pessoas.push({
-            Nome: nome.value,
-            Nascimento: parseBirthDate(birthDate.value)
-        })
-
-        clearInputs()
-
-        console.log(pessoas)
-
-        addToLocalStorage(pessoas)
-
-        addRow(pessoas.at(-1))
-
-    }
-});
+form.addEventListener("submit", submitForm);
 
 editingForm()
 
@@ -184,6 +160,28 @@ function editPersonRow() {
     birthDate.value = unParseBirthDate(personBirth)
 
     editingRow = this.parentElement.parentElement;
+}
+
+
+function submitForm(event){
+    if (formMode === "CREATE") {
+        event.preventDefault();
+        console.log(nome.value);
+        console.log(birthDate.value);
+
+        pessoas.push({
+            Nome: nome.value,
+            Nascimento: parseBirthDate(birthDate.value),
+        });
+
+        clearInputs();
+
+        console.log(pessoas);
+
+        addToLocalStorage(pessoas);
+
+        addRow(pessoas.at(-1));
+    }
 }
 
 
