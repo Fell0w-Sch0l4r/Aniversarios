@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 .delete-btn{
-    @apply  border bg-red-500   
+    @apply text-red-500 hover:underline sm:mr-4 md:text-xl
 }
 
 .edit-btn{
-    @apply  border bg-yellow-200   
+    @apply  text-yellow-500 hover:underline sm:mr-4 md:text-xl
 }

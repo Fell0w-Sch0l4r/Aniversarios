@@ -8,47 +8,56 @@
         <link rel="stylesheet" href="app.css" />
     </head>
     <body>
-        <h1 class="text-4xl text-center">Aniversários</h1>
-        <form class="form js-form">
-            <label for="name">
-                Nome
-                <input
-                    placeholder="Ecreve o nome aqui"
-                    class="form-field js-field"
-                    id="name"
-                    minlength="3"
-                    maxlength="120"
-                    pattern="^[a-zA-Z\s]*$"
-                    name="name"
-                    required
-                    type="text"
-                />
-            </label>
-            <label for="birth-date">
-                Data de Nascimento
-                <input
-                    min="1900-01-01"
-                    class="form-field js-field"
-                    id="birth-date"
-                    name="birth-date"
-                    required
-                    type="date"
-                />
-            </label>
-            <button type="submit">Adicionar</button>
-        </form>
+        <h1 class="h-28 text-6xl text-center bg-blue-400 text-white md:mb-20">
+            Aniversários
+        </h1>
+        <main class="mx-6 mt-4">
+            <h2 class="text-4xl mb-4">Registo</h2>
+            <form class="form js-form flex flex-col h-56 md:h-72 justify-between mb-10 text-lg md:text-2xl">
+                <label for="name" class="flex flex-col text-stone-500 w-fit">
+                    Nome
+                    <input
+                        placeholder="Ecreve o nome aqui"
+                        class="bg-stone-200 h-10 rounded-lg placeholder:text-stone-500 placeholder:text-base text-black text-base md:w-[500px] md:h-14 md:placeholder:text-xl md:text-xl"
+                        id="name"
+                        minlength="3"
+                        maxlength="120"
+                        pattern="^[a-zA-Z\s]*$"
+                        name="name"
+                        required
+                        type="text"
+                    />
+                </label>
+                <label for="birth-date" class="flex flex-col text-stone-500 w-fit">
+                    Data de Nascimento
+                    <input
+                        min="1900-01-01"
+                        class="bg-stone-200 h-10 rounded-lg text-black placeholder:text-base text-base md:w-[500px] md:h-14 md:placeholder:text-xl"
+                        id="birth-date"
+                        name="birth-date"
+                        required
+                        type="date"
+                    />
+                </label>
+                <button type="submit" class="border bg-green-400 w-32 h-10 rounded-xl text-white hover:bg-green-600">Adicionar</button>
+            </form>
 
-        <table class="border-4 border-black">
-            <thead class="border-2 border-black">
-                <tr>
-                    <th class="border border-black">Nome</th>
-                    <th class="border border-black">Data de Nascimento</th>
-                    <th class="border border-black" colspan="2">Ações</th>
-                </tr>
-            </thead>
+            <table class="border border-gray-400 w-11/12 lg:w-[1000px] xl:w-[1200px] lg:m-auto">
+                <thead >
+                    <tr>
+                        <th class="border border-gray-400 md:py-4 lg:py-6 lg:text-2xl text-left">Nome</th>
+                        <th class="border border-gray-400 md:py-4 lg:py-6 lg:text-2xl text-left">Data de Nascimento</th>
+                        <th class="border border-gray-400 md:py-4 lg:py-6 lg:text-2xl text-left" colspan="2">Ações</th>
+                    </tr>
+                </thead>
 
-            <tbody></tbody>
-        </table>
+                <tbody>
+                    <!-- <tr>
+                        <td class="py-4 lg:py-6">lolo</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </main>
 
         <script src="app.js"></script>
     </body>

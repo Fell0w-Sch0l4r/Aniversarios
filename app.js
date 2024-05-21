@@ -46,15 +46,15 @@ function addRow(person){
     deleteBtn.addEventListener("click", deletePersonRow)
     
 
-    btnRow.classList.add("border");
+    btnRow.classList.add("border", "border-gray-400");
     btnRow.appendChild(editBtn)
     btnRow.appendChild(deleteBtn)
 
     tableName.innerText = person.Nome
-    tableName.classList.add("border", "border-black")
+    tableName.classList.add("border", "border-gray-400", "md:py-4", "lg:py-6", "lg:text-xl");
 
     tableBirthDate.innerText = person.Nascimento
-    tableBirthDate.classList.add("border", "border-black");
+    tableBirthDate.classList.add("border", "border-gray-400", "md:py-4", "lg:py-6", "lg:text-xl");
 
     row.appendChild(tableName)
     row.appendChild(tableBirthDate)
@@ -153,6 +153,9 @@ function editPersonRow() {
     formMode = "UPDATE"
     formButton.innerText = "Salvar Alterações"
 
+    formButton.classList.remove("bg-green-400", "hover:bg-green-600", "w-32");
+    formButton.classList.add("bg-yellow-400", "hover:bg-yellow-500", "w-56");
+
     let personName = this.parentElement.parentElement.children[0].innerText;
     let personBirth = this.parentElement.parentElement.children[1].innerText;
 
@@ -211,6 +214,10 @@ function editingForm(){
 
 
             clearInputs()
+
+            formButton.classList.remove("bg-yellow-400", "hover:bg-yellow-500", "w-56");
+            formButton.classList.add("bg-green-400", "hover:bg-green-600", "w-32");
+            
 
             formButton.innerText = "Adicionar";
 
