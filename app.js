@@ -46,7 +46,7 @@ function addRow(person){
     deleteBtn.addEventListener("click", deletePersonRow)
     
 
-    btnRow.classList.add("border", "bg-black");
+    btnRow.classList.add("border");
     btnRow.appendChild(editBtn)
     btnRow.appendChild(deleteBtn)
 
@@ -208,9 +208,6 @@ function editingForm(){
             editingRow.children[0].innerText = nome.value;
 
             editingRow.children[1].innerText = parseBirthDate(birthDate.value);
-
-
-
 
 
             clearInputs()
