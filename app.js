@@ -152,6 +152,7 @@ function editPersonRow() {
 
     formMode = "UPDATE"
     formButton.innerText = "Salvar Alterações"
+    nome.focus()
 
     formButton.classList.remove("bg-green-400", "hover:bg-green-600", "w-32");
     formButton.classList.add("bg-yellow-400", "hover:bg-yellow-500", "w-56");
